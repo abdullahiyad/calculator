@@ -4,8 +4,9 @@
  - html
  - css
  - js
+   
+ properties : 
+ - responsive 
+ - have dark and light themes
+ - easy to use
 
-properties:
-  -responsive 
-  -have dark and light themes 
-  -easy to use
