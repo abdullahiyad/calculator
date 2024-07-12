@@ -54,6 +54,73 @@ html {
   align-items: center;
   color: var(--color-dark);
 }
+
+.info {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  font-size: 30px !important;
+  cursor: pointer;
+}
+
+.info-window {
+  position: absolute;
+  width: 0px;
+  height: 350px;
+  z-index: -1;
+  overflow: hidden;
+  color: var(--button-color);
+  background-color: var(--color-dark);
+  border-radius: var(--border-radius-3);
+  -webkit-border-radius: var(--border-radius-3);
+  -moz-border-radius: var(--border-radius-3);
+  -ms-border-radius: var(--border-radius-3);
+  -o-border-radius: var(--border-radius-3);
+  padding: 10px;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  transition: 0.15s ease;
+  -webkit-transition: 0.15s ease;
+  -moz-transition: 0.15s ease;
+  -ms-transition: 0.15s ease;
+  -o-transition: 0.15s ease;
+  line-height: 2;
+}
+.info-window a {
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 20px !important;
+  color: white;
+  line-height: 2;
+  padding: 0px 15px;
+  border-radius: var(--border-radius-3);
+  background-color: var(--ans-background-btn);
+  -webkit-border-radius: var(--border-radius-3);
+  -moz-border-radius: var(--border-radius-3);
+  -ms-border-radius: var(--border-radius-3);
+  -o-border-radius: var(--border-radius-3);
+}
+
+.info-window-active .calculator {
+  filter: blur(12px) !important;
+  -webkit-filter: blur(12px) !important;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.info-window-active .info-window {
+  z-index: 1;
+  width: 350px;
+  height: 350px;
+}
+
 /* style for calculator body */
 .calculator {
   width: 400px;
@@ -157,4 +224,17 @@ html {
   -moz-border-radius: var(--border-radius-3);
   -ms-border-radius: var(--border-radius-3);
   -o-border-radius: var(--border-radius-3);
+}
+
+/* make it responsive for phones */
+@media (max-width: 400px) {
+  .calculator {
+    width: 350px;
+  }
+  .calculator .btn,
+  .ans-btn,
+  .clear-btn {
+    width: 70px !important;
+    height: 70px !important;
+  }
 }

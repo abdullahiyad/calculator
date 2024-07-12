@@ -32,3 +32,8 @@ document.querySelector(".ans-btn").addEventListener("click", () => {
 document.querySelector(".clear-btn").addEventListener("click", () => {
   document.querySelector(".screen").textContent = 0;
 });
+
+//show info page
+document.querySelector(".info").addEventListener("click", () => {
+  document.querySelector(".container").classList.toggle("info-window-active");
+});
